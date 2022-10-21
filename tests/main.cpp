@@ -4,6 +4,7 @@
 #include "m.h"
 #include "r1e.h"
 #include "load.h"
+#include "remove_all.h"
 
 #include <gtest/gtest.h>
 
