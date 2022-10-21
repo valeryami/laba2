@@ -2,9 +2,7 @@
 #include <gmock/gmock-matchers.h>
 #include <string>
 
-#include "common.h"
-#include "text.h"
-#include "_text.h"
+#include "all_tests.h"
 
 using namespace std;
 
