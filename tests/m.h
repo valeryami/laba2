@@ -9,11 +9,11 @@ TEST(m, on_first_begin)
 
     text txt = create_text();
     
-    append_line(txt, "Тестъ ";
+    append_line(txt, "Тестъ ");
     output_text += "Тестъ \n";
-    append_line(txt, "Тестъ ";
+    append_line(txt, "Тестъ ");
     output_text += "Тестъ \n";
-    append_line(txt, "Тестъ ";
+    append_line(txt, "Тестъ ");
     output_text += "Тестъ \n";
 
     testing::internal::CaptureStdout();
@@ -33,11 +33,11 @@ TEST(m, on_first)
 
     text txt = create_text();
     
-    append_line(txt, "Тестъ ";
+    append_line(txt, "Тестъ ");
     output_text += "Тестъ |\n";
-    append_line(txt, "Тестъ ";
+    append_line(txt, "Тестъ ");
     output_text += "Тестъ \n";
-    append_line(txt, "Тестъ ";
+    append_line(txt, "Тестъ ");
     output_text += "Тестъ \n";
                 
     testing::internal::CaptureStdout();
@@ -57,11 +57,11 @@ TEST(m, on_center_begin)
 
     text txt = create_text();
     
-    append_line(txt, "Тестъ ";
+    append_line(txt, "Тестъ ");
     output_text += "Тестъ \n";
-    append_line(txt, "Тестъ ";
+    append_line(txt, "Тестъ ");
     output_text += "|Тестъ \n";
-    append_line(txt, "Тестъ ";
+    append_line(txt, "Тестъ ");
     output_text += "Тестъ \n";
 
     testing::internal::CaptureStdout();
@@ -81,11 +81,11 @@ TEST(m, on_center)
 
     text txt = create_text();
     
-    append_line(txt, "Тестъ ";
+    append_line(txt, "Тестъ ");
     output_text += "Тестъ \n";
-    append_line(txt, "Тестъ ";
+    append_line(txt, "Тестъ ");
     output_text += "Тес|тъ \n";
-    append_line(txt, "Тестъ ";
+    append_line(txt, "Тестъ ");
     output_text += "Тестъ \n";
     
     testing::internal::CaptureStdout();
@@ -105,11 +105,11 @@ TEST(m, out_of_str)
 
     text txt = create_text();
     
-    append_line(txt, "Тестъ ";
+    append_line(txt, "Тестъ ");
     output_text += "Тестъ \n";
-    append_line(txt, "Тестъ ";
+    append_line(txt, "Тестъ ");
     output_text += "|Тестъ \n";
-    append_line(txt, "Тестъ ";
+    append_line(txt, "Тестъ ");
     output_text += "Тестъ \n";
 
     testing::internal::CaptureStdout();
@@ -127,11 +127,11 @@ TEST(m, minus_str)
 {
     std::string output_text = "";
 
-    append_line(txt, "Тестъ ";
+    append_line(txt, "Тестъ ");
     output_text += "Тестъ \n";
-    append_line(txt, "Тестъ ";
+    append_line(txt, "Тестъ ");
     output_text += "|Тестъ \n";
-    append_line(txt, "Тестъ ";
+    append_line(txt, "Тестъ ");
     output_text += "Тестъ \n";
 
     testing::internal::CaptureStdout();
@@ -151,11 +151,11 @@ TEST(m, more_str)
 
     text txt = create_text();
     
-    append_line(txt, "Тестъ ";
+    append_line(txt, "Тестъ ");
     output_text += "Тестъ \n";
-    append_line(txt, "Тестъ ";
+    append_line(txt, "Тестъ ");
     output_text += "|Тестъ \n";
-    append_line(txt, "Тестъ ";
+    append_line(txt, "Тестъ ");
     output_text += "Тестъ \n";
 
     testing::internal::CaptureStdout();
@@ -175,11 +175,11 @@ TEST(m, minus_pos)
 
     text txt = create_text();
     
-    append_line(txt, "Тестъ ";
+    append_line(txt, "Тестъ ");
     output_text += "Тестъ \n";
-    append_line(txt, "Тестъ ";
+    append_line(txt, "Тестъ ");
     output_text += "|Тестъ \n";
-    append_line(txt, "Тестъ ";
+    append_line(txt, "Тестъ ");
     output_text += "Тестъ \n";
 
     testing::internal::CaptureStdout();
@@ -198,11 +198,11 @@ TEST(m, empty_str)
     std::string output_text = "";
 
     text txt = create_text();
-    append_line(txt, "";
+    append_line(txt, "");
     output_text += "\n";
-    append_line(txt, "";
+    append_line(txt, "");
     output_text += "|\n";
-    append_line(txt, "";
+    append_line(txt, "");
     output_text += "\n";
 
     testing::internal::CaptureStdout();
