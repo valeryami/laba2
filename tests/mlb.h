@@ -74,34 +74,4 @@ TEST(mlb, on_center)
     EXPECT_STREQ(text.c_str(), output_text.c_str());
 }
 
-
-TEST(mlb, on_center)
-{
-    std::string output_text = "";
-
-    
-    text txt = create_text();
-    
-    append_line(txt, "milka and poilka");
-    output_text += "milka and poilka\n";
-    append_line(txt, "milka and poilka");
-    output_text += "milka and poilka\n";
-    append_line(txt, "milka and poilka");
-    output_text += "milka and poilka\n";
-    append_line(txt, "milka and poilka");
-    output_text += "milka and poilka\n";
-    append_line(txt, "milka and poilka");
-    output_text += "|milka and poilka\n";
-    append_line(txt, "milka and poilka");
-    output_text += "milka and poilka\n";
-   
-    testing::internal::CaptureStdout();
-
-    m(txt, 4, 8);
-    mlb(txt);
-    show(txt);
-    std::string text = testing::internal::GetCapturedStdout();
-
-    EXPECT_STREQ(text.c_str(), output_text.c_str());
-}
 #endif // MLB_H
