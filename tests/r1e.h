@@ -8,15 +8,21 @@ TEST(r1e, first_empty)
     std::string output_text = "";
 
     text txt = create_text();
+    
     for (int i = 0; i < 10; i++) {
-        if (i == 0) {
+        if (i == 0) 
+        {
             append_line(txt, "");
-        } else if (i == 1){
-            append_line(txt, "r1e test " + std::to_string(i));
-            output_text += "|r1e test " + std::to_string(i) + "\n";
-        } else {
-            append_line(txt, "r1e test " + std::to_string(i));
-            output_text += "r1e test " + std::to_string(i) + "\n";
+        } 
+        else if (i == 1)
+        {
+            append_line(txt, "новая строка" + std::to_string(i));
+            output_text += "|курсор " + std::to_string(i) + "\n";
+        } 
+        else 
+        {
+            append_line(txt, "следующая" + std::to_string(i));
+            output_text += "тестируем" + std::to_string(i) + "\n";
         }
     }
 
@@ -39,8 +45,8 @@ TEST(r1e, center_empty)
         if (i == 5) {
             append_line(txt, "");
         } else {
-            append_line(txt, "r1e test " + std::to_string(i));
-            output_text += "r1e test " + std::to_string(i) + "\n";
+            append_line(txt, "тести " + std::to_string(i));
+            output_text += "нести " + std::to_string(i) + "\n";
         }
     }
 
@@ -58,40 +64,27 @@ TEST(r1e, last_empty)
     std::string output_text = "";
 
     text txt = create_text();
-    for (int i = 0; i < 10; i++) {
-        if (i == 9) {
+    for (int i = 0; i < 10; i++) 
+    {
+        if (i == 9) 
+        {
             append_line(txt, "");
-        } else if (i == 8) {
-            append_line(txt, "r1e test " + std::to_string(i));
-            output_text += "|r1e test " + std::to_string(i) + "\n";
-        } else {
-            append_line(txt, "r1e test " + std::to_string(i));
-            output_text += "r1e test " + std::to_string(i) + "\n";
+        } 
+        else if (i == 8) 
+        {
+            append_line(txt, "тестим " + std::to_string(i));
+            output_text += "|тестим " + std::to_string(i) + "\n";
+        }
+        else 
+        {
+            append_line(txt, "также " + std::to_string(i));
+            output_text += "также " + std::to_string(i) + "\n";
         }
     }
 
     testing::internal::CaptureStdout();
 
     m(txt, 9, 0);
-    r1e(txt);
-    show(txt);
-    std::string text = testing::internal::GetCapturedStdout();
-
-    EXPECT_STREQ(text.c_str(), output_text.c_str());
-}
-
-TEST(r1e, no_empty)
-{
-    std::string output_text = "";
-
-    text txt = create_text();
-    for (int i = 0; i < 10; i++) {
-        append_line(txt, "r1e test " + std::to_string(i));
-        output_text += "r1e test " + std::to_string(i) + "\n";
-    }
-
-    testing::internal::CaptureStdout();
-
     r1e(txt);
     show(txt);
     std::string text = testing::internal::GetCapturedStdout();
@@ -107,8 +100,7 @@ TEST(r1e, one_str)
     append_line(txt, "");
 
     r1e(txt);
-
-    ASSERT_DEATH(show(txt), "");
+    EXPECT_DEATH(show(txt), "");
 }
 
 TEST(r1e, nothing)
@@ -116,9 +108,7 @@ TEST(r1e, nothing)
     std::string output_text = "There are already no any lines in the text!\n";
 
     text txt = create_text();
-
     testing::internal::CaptureStderr();
-
     r1e(txt);
     show(txt);
     std::string text = testing::internal::GetCapturedStderr();
