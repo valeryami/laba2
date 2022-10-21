@@ -15,7 +15,7 @@ TEST(delite, positive)
 
     remove_all(NULL);
     
-    std::string text = testing::internal::GetCapturedStdout();
+    std::string text = testing::internal::GetCapturedStderr();
 
     EXPECT_STREQ(text.c_str(), output_text.c_str());
 }
