@@ -127,6 +127,8 @@ TEST(m, minus_str)
 {
     std::string output_text = "";
 
+    text txt = create_text();
+    
     append_line(txt, "Тестъ ");
     output_text += "Тестъ \n";
     append_line(txt, "Тестъ ");
