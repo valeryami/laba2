@@ -6,34 +6,6 @@
 
 using namespace std;
 
-TEST(save, line)
-{
-    text txt = create_text();
-
-    append_line(txt, "Строка 1");
-    append_line(txt, "Строка 2");
-    append_line(txt, "Строка 3");
-
-    save(txt, "test.save");
-
-    text txt2 = create_text();
-
-    load(txt2, "test.save");
-
-    string* txt_arr = new string[txt->_list->size()];
-    string* txt2_arr = new string[txt2->_list->size()];
-    
-    copy(txt->myList->begin(), txt->_list->end(), txt_arr);
-    copy(txt2->myList->begin(), txt2->_list->end(), txt2_arr);
-    
-    for(unsigned int i = 0; i < txt->_list->size(); i++)
-        EXPECT_STREQ(txt_arr[i].c_str(), txt2_arr[i].c_str());
-    EXPECT_EQ(txt->_list->size(), txt2->_list->size());
-    
-    free(txt);
-    free(txt2);
-}
-
 TEST(save, with_empty_strs)
 {
     text txt = create_text();
