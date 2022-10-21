@@ -20,15 +20,15 @@ TEST(save, line)
 
     load(txt2, "test.save");
 
-    string* txt_arr = new string[txt->myList->size()];
-    string* txt2_arr = new string[txt2->myList->size()];
+    string* txt_arr = new string[txt->_list->size()];
+    string* txt2_arr = new string[txt2->_list->size()];
     
-    copy(txt->myList->begin(), txt->myList->end(), txt_arr);
-    copy(txt2->myList->begin(), txt2->myList->end(), txt2_arr);
+    copy(txt->myList->begin(), txt->_list->end(), txt_arr);
+    copy(txt2->myList->begin(), txt2->_list->end(), txt2_arr);
     
-    for(unsigned int i = 0; i < txt->myList->size(); i++)
+    for(unsigned int i = 0; i < txt->_list->size(); i++)
         EXPECT_STREQ(txt_arr[i].c_str(), txt2_arr[i].c_str());
-    EXPECT_EQ(txt->myList->size(), txt2->myList->size());
+    EXPECT_EQ(txt->_list->size(), txt2->_list->size());
     
     free(txt);
     free(txt2);
