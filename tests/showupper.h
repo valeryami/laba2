@@ -28,7 +28,7 @@ TEST(showupper, numbers)
     text txt = create_text();
     for (int i = 0; i < 10; i++) {
         append_line(txt, " " + std::to_string(i));
-        output += " " + std::to_string(i) + "\n";
+        output_text += " " + std::to_string(i) + "\n";
     }
 
     testing::internal::CaptureStdout();
