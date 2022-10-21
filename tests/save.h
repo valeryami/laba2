@@ -4,6 +4,8 @@
 #include <string>
 #include "all_tests.h"
 
+using namespace std;
+
 TEST(save, line)
 {
     text txt = create_text();
