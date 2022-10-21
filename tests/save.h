@@ -16,7 +16,7 @@ TEST(save, with_empty_strs)
 
     save(txt, "save.test");
 
-    QFile file(save.test);
+    QFile file("save.test");
     bool res = file.open(QIODevice::ReadOnly);
     ASSERT_EQ(res, true);
 
@@ -38,7 +38,7 @@ TEST(save, nothing)
     text txt = create_text();
     save(txt, "save.test");
 
-    QFile file(save.test);
+    QFile file("save.test");
     bool res = file.open(QIODevice::ReadOnly);
     ASSERT_EQ(res, true);
 
