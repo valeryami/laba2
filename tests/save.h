@@ -1,6 +1,7 @@
 #ifndef SAVE_H
 #define SAVE_H
 
+#inclide <string>
 #include "all_tests.h"
 
 TEST(save, line)
