@@ -13,7 +13,7 @@ TEST(delite, positive)
 
     testing::internal::CaptureStdout();
 
-    text txt;
+    text txt = create_text();
     remove_all(txt);
     
     std::string text = testing::internal::GetCapturedStdout();
