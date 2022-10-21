@@ -16,12 +16,12 @@ TEST(r1e, first_empty)
         } 
         else if (i == 1)
         {
-            append_line(txt, "новая строка" + std::to_string(i));
+            append_line(txt, "курсор" + std::to_string(i));
             output_text += "|курсор " + std::to_string(i) + "\n";
         } 
         else 
         {
-            append_line(txt, "следующая" + std::to_string(i));
+            append_line(txt, "тестируем" + std::to_string(i));
             output_text += "тестируем" + std::to_string(i) + "\n";
         }
     }
