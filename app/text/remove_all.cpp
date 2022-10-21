@@ -19,7 +19,7 @@ void remove_all(text txt)
 {
     /* Проверяем, имеется ли текст */
     if (txt == NULL) {
-        fprintf(stderr, "The text doesn't exist!\n");
+        fprintf(stdout, "The text doesn't exist!\n");
         return;
     }
 
