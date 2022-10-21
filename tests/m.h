@@ -42,7 +42,7 @@ TEST(m, on_first)
                 
     testing::internal::CaptureStdout();
 
-    m(txt, 0, 6);
+    m(txt, 0, 12);
     show(txt);
     std::string text = testing::internal::GetCapturedStdout();
 
@@ -90,7 +90,7 @@ TEST(m, on_center)
     
     testing::internal::CaptureStdout();
 
-    m(txt, 1, 3);
+    m(txt, 1, 6);
     show(txt);
     std::string text = testing::internal::GetCapturedStdout();
 
@@ -108,13 +108,13 @@ TEST(m, out_of_str)
     append_line(txt, "Тестъ ");
     output_text += "Тестъ \n";
     append_line(txt, "Тестъ ");
-    output_text += "|Тестъ \n";
+    output_text += "Тестъ |\n";
     append_line(txt, "Тестъ ");
     output_text += "Тестъ \n";
 
     testing::internal::CaptureStdout();
 
-    m(txt, 2, 30);
+    m(txt, 1, 30);
     show(txt);
     std::string text = testing::internal::GetCapturedStdout();
 
@@ -132,7 +132,7 @@ TEST(m, minus_str)
     append_line(txt, "Тестъ ");
     output_text += "Тестъ \n";
     append_line(txt, "Тестъ ");
-    output_text += "|Тестъ \n";
+    output_text += "Тестъ \n";
     append_line(txt, "Тестъ ");
     output_text += "Тестъ \n";
 
@@ -156,7 +156,7 @@ TEST(m, more_str)
     append_line(txt, "Тестъ ");
     output_text += "Тестъ \n";
     append_line(txt, "Тестъ ");
-    output_text += "|Тестъ \n";
+    output_text += "Тестъ \n";
     append_line(txt, "Тестъ ");
     output_text += "Тестъ \n";
 
@@ -180,7 +180,7 @@ TEST(m, minus_pos)
     append_line(txt, "Тестъ ");
     output_text += "Тестъ \n";
     append_line(txt, "Тестъ ");
-    output_text += "|Тестъ \n";
+    output_text += "Тестъ \n";
     append_line(txt, "Тестъ ");
     output_text += "Тестъ \n";
 
