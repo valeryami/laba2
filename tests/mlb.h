@@ -46,7 +46,7 @@ TEST(mlb, on_first)
     m(txt, 0, 5);
     mlb(txt);
     show(txt);
-    std::string text = testing::internal::GeCapturedStdout();
+    std::string text = testing::internal::GetCapturedStdout();
 
     EXPECT_STREQ(text.c_str(), output_text.c_str());
 }
