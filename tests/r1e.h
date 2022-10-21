@@ -17,7 +17,7 @@ TEST(r1e, first_empty)
         else if (i == 1)
         {
             append_line(txt, "курсор" + std::to_string(i));
-            output_text += "|курсор " + std::to_string(i) + "\n";
+            output_text += "|курсор" + std::to_string(i) + "\n";
         } 
         else 
         {
@@ -46,7 +46,7 @@ TEST(r1e, center_empty)
             append_line(txt, "");
         } else {
             append_line(txt, "тести " + std::to_string(i));
-            output_text += "нести " + std::to_string(i) + "\n";
+            output_text += "тести " + std::to_string(i) + "\n";
         }
     }
 
